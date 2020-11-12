@@ -1,0 +1,68 @@
+/************************** General Style *********************/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+ul {
+  text-decoration: none;
+  list-style-type: none;
+}
+body {
+  width: 1015px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+button {
+  border: none;
+  background: none;
+}
+
+/************************** Header *********************/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+}
+
+header div ul {
+  display: flex;
+}
+
+header div ul li {
+  padding: 10px;
+}
+
+#NavBarRightSide img {
+  width: 28px;
+  height: 28px;
+  padding: 10px;
+}
+
+/************************** Items Side *********************/
+
+#items {
+  height: 1800px;
+  margin-top: 100px;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+}
+.item img {
+  width: 200px;
+}
+
+svg {
+  width: 20px;
+  height: 20px;
+  margin: 10px 10px;
+}
+
+input {
+  width: 20px;
+}
