@@ -3,17 +3,18 @@
   margin: 0;
   padding: 0;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  line-height: 20px;
 }
 
 ul {
   text-decoration: none;
   list-style-type: none;
 }
-body {
+/* body {
   width: 1015px;
   margin: 0 auto;
   padding: 0px 20px;
-}
+} */
 button {
   border: none;
   background: none;
@@ -22,9 +23,25 @@ button {
 /************************** Header *********************/
 
 header {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px 20px;
   display: flex;
   justify-content: space-between;
   height: 50px;
+  margin-bottom: 80px;
+  position: fixed;
+  position: -webkit-sticky;
+  top: 0;
+  background: white;
+}
+
+#headContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 1015px;
+  margin: 0 auto;
+  height: 70px;
 }
 
 header div ul {
@@ -40,19 +57,33 @@ header div ul li {
   height: 28px;
   padding: 10px;
 }
+/************************** Container *********************/
+#EveryThing_Container {
+  width: 1150px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
 
 /************************** Items Side *********************/
+h1 {
+  margin-top: 100px;
+  height: 20px;
+  width: 300px;
+}
 
 #items {
-  height: 1800px;
   margin-top: 100px;
+  width: 750px;
+  float: left;
 }
+
 .item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
 .item img {
   width: 200px;
 }
@@ -65,4 +96,33 @@ svg {
 
 input {
   width: 20px;
+  border: none;
+}
+
+.likeAndClose {
+  width: 100px;
+  float: left;
+}
+
+.ImgAndCaption {
+  display: flex;
+  align-items: center;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+}
+
+/************************** Items Side *********************/
+#Bill {
+  float: right;
+  margin-top: 200px;
+  width: 350px;
+  height: 400px;
+  background-color: #191f1e;
+  color: #4a5150;
+  padding: 10px;
+  border: 3px;
+  border-radius: 5px;
 }
