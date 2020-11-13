@@ -128,7 +128,7 @@ input::-webkit-inner-spin-button {
   float: right;
   margin-top: 200px;
   width: 350px;
-  height: 400px;
+  height: 500px;
   background-color: #191f1e;
   color: #4a5150;
   padding: 10px;
@@ -141,4 +141,19 @@ input::-webkit-inner-spin-button {
 
 #articles h4 {
   height: 70px;
+}
+
+#somme {
+  margin: 10px 40px;
+  color: #f7f465;
+  float: left;
+}
+
+#Bill p {
+  float: right;
+  position: relative;
+  bottom: 30px;
+  right: 240px;
+  font-size: 24px;
+  color: #f7f465;
 }
