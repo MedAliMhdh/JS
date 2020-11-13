@@ -95,8 +95,16 @@ svg {
 }
 
 input {
-  width: 20px;
+  width: 30px;
   border: none;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .likeAndClose {
@@ -115,6 +123,7 @@ input {
 }
 
 /************************** Items Side *********************/
+
 #Bill {
   float: right;
   margin-top: 200px;
@@ -125,4 +134,11 @@ input {
   padding: 10px;
   border: 3px;
   border-radius: 5px;
+}
+#articles {
+  margin: 100px 10px;
+}
+
+#articles h4 {
+  height: 70px;
 }
