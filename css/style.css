@@ -152,8 +152,9 @@ input::-webkit-inner-spin-button {
 #Bill p {
   float: right;
   position: relative;
-  bottom: 30px;
+  bottom: 31px;
   right: 240px;
   font-size: 24px;
   color: #f7f465;
+  font-weight: bold;
 }
