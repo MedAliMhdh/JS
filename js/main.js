@@ -1,39 +1,24 @@
-let prix1 = document.getElementById("prix1").textContent;
-let prix2 = document.getElementById("prix2").textContent;
-let prix3 = document.getElementById("prix3").textContent;
-let somme = document.getElementById("somme");
-
+////////////////////////////////////////add item Substract item function/////////////
 function addItem(x) {
-  x = document.getElementById(x);
-  if (x.value < 6) {
-    x.value = +x.value + 1;
-  } else {
-    alert("stock epuisé");
+  let a = document.getElementById(x);
+  let b = a.getAttribute("value");
+  if (b < 5) {
+    b = +b + +1;
+    a.setAttribute("value", b);
   }
-  var var1 = document.getElementById("input1").value;
-  var var2 = document.getElementById("input2").value;
-  var var3 = document.getElementById("input3").value;
-  document.getElementById("somme").innerHTML =
-    parseInt(var1, 10) * parseInt(prix1, 10) +
-    parseInt(var2, 10) * parseInt(prix2, 10) +
-    parseInt(var3, 10) * parseInt(prix3, 10);
+  sum();
+}
+function susbstructItem(x) {
+  let a = document.getElementById(x);
+  let b = a.getAttribute("value");
+  if (b > 0) {
+    b = +b - +1;
+    a.setAttribute("value", b);
+  }
+  sum();
 }
 
-function susbstructItem(y) {
-  y = document.getElementById(y);
-  if (y.value > 0) {
-    y.value = +y.value - 1;
-  }
-  var var1 = document.getElementById("input1").value;
-  var var2 = document.getElementById("input2").value;
-  var var3 = document.getElementById("input3").value;
-  document.getElementById("somme").innerHTML =
-    parseInt(var1, 10) * parseInt(prix1, 10) +
-    parseInt(var2, 10) * parseInt(prix2, 10) +
-    parseInt(var3, 10) * parseInt(prix3, 10);
-}
-
-///////////////////////////////Like//////////////////////////
+///////////////////////////////Like function//////////////////////////
 
 function like(clik) {
   let heart = document.getElementById(clik);
@@ -44,32 +29,27 @@ function like(clik) {
   }
 }
 
-///////////////////////////Remove elements////////////////////////
+///////////////////////////sum function////////////////////////
+let s = document.getElementById("somme").innerHTML;
+let prix1 = document.getElementById("prix1").textContent;
+let prix2 = document.getElementById("prix2").textContent;
+let prix3 = document.getElementById("prix3").textContent;
 
-var itemsnumber1 = document.getElementById("input1").value;
-var itemsnumber2 = document.getElementById("input2").value;
-var itemsnumber3 = document.getElementById("input3").value;
-document.getElementById("somme").innerHTML =
-  parseInt(itemsnumber2, 10) * parseInt(prix2, 10) +
-  parseInt(itemsnumber3, 10) * parseInt(prix3, 10) +
-  parseInt(itemsnumber1, 10) * parseInt(prix1, 10);
-var var1 = document.getElementById("input1").value;
-var var2 = document.getElementById("input2").value;
-var var3 = document.getElementById("input3").value;
+var myTab = [1, 2, 3];
 
-function rmv(x, y) {
-  if (x.slice(x.length - 1) === "1") {
-    var1 = "0";
-  } else if (x.slice(x.length - 1) === "2") {
-    var2 = "0";
-  } else {
-    var3 = "0";
+function sum() {
+  s = 0;
+  for (i = 1; i <= 3; i++) {
+    if (document.getElementById(`input${i}`)) {
+      let a = document.getElementById(`input${i}`).value;
+      let b = document.getElementById(`prix${i}`).innerHTML;
+      s = +s + +a * +b;
+      document.getElementById("somme").innerHTML = s;
+    }
   }
-  document.getElementById("somme").innerHTML = 0;
-  document.getElementById("somme").innerHTML =
-    parseInt(var1, 10) * parseInt(prix1, 10) +
-    parseInt(var2, 10) * parseInt(prix2, 10) +
-    parseInt(var3, 10) * parseInt(prix3, 10);
+}
+sum();
 
-  document.getElementById(y).remove();
+function rmv(x) {
+  document.getElementById(x).remove();
 }
